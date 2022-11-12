@@ -80,9 +80,9 @@ void gasdetailr0()
   byte payload[5];
   payload[0] = (digitalRead(LED_BUILTIN) == HIGH) ? 1 : 0;
   payload[1] = (sensorValue);
-  payload[2] = (sensor_volt);
-  payload[3] = (RS_gas);
-  payload[4] = (ratio);
+  payload[2] = ((sensor_volt)*100);
+  payload[3] = ((RS_gas)*1);
+  payload[4] = ((ratio)*1);
 
 
 
@@ -111,19 +111,5 @@ void loop()
   
   gasdetailr0();
 
-
-  // Prepare payload of 1 byte to indicate LED status
-  //byte payload[2];
-  //payload[0] = (digitalRead(LED_BUILTIN) == HIGH) ? 1 : 0;
-  //payload[1] = (sensorValue);
-  // payload[2] = (sensor_volt);
-  //payload[3] = (RS_gas);
-  //payload[4] = (ratio);
-
-
-
-  // Send it off
-  //ttn.sendBytes(payload, sizeof(payload));
-
-  //delay(10000);
+  delay(10000);
 }
