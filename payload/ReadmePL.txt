@@ -1,0 +1,15 @@
+function Decoder(bytes, port) {
+  var led = (bytes[0]);
+  var sensor = (bytes[1]);
+  var s_volt = (bytes[2]);
+  var ratio = (bytes[3])<<8 | bytes [4]; Hier wurde der wert ZB von 13333 auf 2 Byte aufgeteilt
+  var rsr0 = (bytes[5])<<8 | bytes [6];
+  
+     return {
+      LED: led ,
+      SENSOR: sensor,
+      S_VOLT: s_volt/100,
+      RATIO: ratio/100,
+      RSR0: rsr0/100,
+  }   
+}
