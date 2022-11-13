@@ -5,8 +5,9 @@ https://www.bjoerns-techblog.de/2018/04/payload-sparen-im-ttn/
 
 
 # Hier wird es zum Versand vorbereitet:
-...
-	float sensor_volt;
+
+
+    `float sensor_volt;
     float RS_gas; // Get value of RS in a GAS
     float ratio; // Get ratio RS_GAS/RS_air
     int sensorValue = analogRead(A0);
@@ -15,12 +16,13 @@ https://www.bjoerns-techblog.de/2018/04/payload-sparen-im-ttn/
  
           /*-Replace the name "R0" with the value of R0 in the demo of First Test -*/
     ratio = RS_gas/0.10;  // ratio = RS/R0
-          /*-----------------------------------------------------------------------*/
+          /*-----------------------------------------------------------------------*/`
 
-...
 
-    int rgs = ((RS_gas)*100);
-    int rto = ((ratio)*100);
+
+
+  ` int rgs = ((RS_gas)*100);
+   int rto = ((ratio)*100);
 
    // Prepare payload of 7 byte of LED/Gas Dedektor
     byte payload[7];
@@ -31,16 +33,19 @@ https://www.bjoerns-techblog.de/2018/04/payload-sparen-im-ttn/
     payload[3] = rgs >> 8;
     payload[4] = rgs;
 	payload[5] = rto >> 8;>> HEX 34 Hier wurde der wert ZB von 13333 auf 2 Byte aufgeteilt >> HEX 34 15
-    payload[6] = rto; >> HEX 15
-...
+    payload[6] = rto; >> HEX 15`
+    
+
+
 
 # Nun noch auf der TheThinkNetwork Console den Payload zur Applikation Anpassen
 https://eu1.cloud.thethings.network/console/applications
 # Hier lang:
 Applications > End devices > "Applications" > "Applikation" > Payload formatters > Uplink :
 
-...
-function Decoder(bytes, port) {
+
+
+  `function Decoder(bytes, port) {
   var led = (bytes[0]);
   var sensor = (bytes[1]);
   var s_volt = (bytes[2]);
@@ -54,5 +59,5 @@ function Decoder(bytes, port) {
       RATIO: ratio/100, von 13333 zur 133,33
       RSR0: rsr0/100,
   }   
-}
-...
+}`
+
