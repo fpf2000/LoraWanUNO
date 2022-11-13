@@ -1,10 +1,10 @@
-Diverse Links:
+# Diverse Links:
 https://www.aeq-web.com/so-funktioniert-die-lora-payload-encoder-decoder-ttn/
 
 https://www.bjoerns-techblog.de/2018/04/payload-sparen-im-ttn/
 
 
-Hier wird es zum Versand vorbereitet:
+# Hier wird es zum Versand vorbereitet:
 ....
 	float sensor_volt;
     float RS_gas; // Get value of RS in a GAS
@@ -34,9 +34,9 @@ Hier wird es zum Versand vorbereitet:
     payload[6] = rto; >> HEX 15
 
 
-Nun noch auf der TheThinkNetwork Console den Payload zur Applikation Anpassen
+# Nun noch auf der TheThinkNetwork Console den Payload zur Applikation Anpassen
 https://eu1.cloud.thethings.network/console/applications
-Hier lang:
+# Hier lang:
 Applications > End devices > "Applications" > "Applikation" > Payload formatters > Uplink :
 
 
