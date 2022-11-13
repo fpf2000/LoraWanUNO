@@ -15,3 +15,6 @@ Den Code haben Wir Anschließend in den TTN Code loraunomq2.ino eingebunden und 
 Payload Werte entsprechend angepasst.
 
 Jetzt werden die Werte ueber das TTN Netzwerk entsprechend uebermittelt.
+
+Inzwischen gibt es hier im Git VZ auch eine Dokumentation 
+https://github.com/fpf2000/LoraWanUNO/blob/main/Dok/LoraWan%20UNOV001.pdf
