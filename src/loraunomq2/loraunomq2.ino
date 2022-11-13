@@ -1,10 +1,3 @@
-#include <TheThingsNetwork.h>
- 
- // Set your AppEUI and AppKey
-const char *appEui = "0000000D0000000";
-const char *appKey = "00000A6049700004CA4E00DC000000";
-
-
 #define loraSerial Serial1
 #define debugSerial Serial
  
@@ -76,18 +69,23 @@ void gasdetailr0()
  
     Serial.print("\n\n");
 
-      // Prepare payload of 3 byte of Gas Dedektor
-  byte payload[5];
-  payload[0] = (digitalRead(LED_BUILTIN) == HIGH) ? 1 : 0;
-  payload[1] = (sensorValue);
-  payload[2] = ((sensor_volt)*100);
-  payload[3] = ((RS_gas)*1);
-  payload[4] = ((ratio)*1);
+    int rgs = ((RS_gas)*100);
+    int rto = ((ratio)*100);
+
+  // Prepare payload of 7 byte of LED/Gas Dedektor
+    byte payload[7];
+    payload[0] = (digitalRead(LED_BUILTIN) == HIGH) ? 1 : 0;
+    payload[1] = (sensorValue);
+    payload[2] = ((sensor_volt)*100);
+    payload[3] = rgs >> 8;
+    payload[4] = rgs;
+    payload[5] = rto >> 8;
+    payload[6] = rto;
 
 
 
   // Send it off
-  ttn.sendBytes(payload, sizeof(payload));
+    ttn.sendBytes(payload, sizeof(payload));
  
     delay(1000);
 }  
