@@ -1,4 +1,4 @@
-# LoraWanUNO
+# LoraWanUNO mit MQ2 Sensores
 ARDUINO UNO OVER TheThingsNetwork LoraWan
 Der TTN UNO wurde mit dem  MQ2 FC-22 GAS Sensor angeschaltet.
 
