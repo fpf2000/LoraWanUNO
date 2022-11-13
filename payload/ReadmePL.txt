@@ -34,6 +34,10 @@ Hier wird es zum Versand vorbereitet:
     payload[6] = rto; >> HEX 15
 
 
+Nun noch auf der TheThinkNetwork Console den Payload zur Applikation Anpassen
+https://eu1.cloud.thethings.network/console/applications
+Hier lang:
+Applications > End devices > "Applications" > "Applikation" > Payload formatters > Uplink :
 
 
 function Decoder(bytes, port) {
