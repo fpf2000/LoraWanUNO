@@ -14,6 +14,12 @@ Zum Datenblatt  https://www.pololu.com/file/0J309/MQ2.pdf
 Den Code haben Wir Anschließend in den TTN Code loraunomq2.ino eingebunden und die 
 Payload Werte entsprechend angepasst.
 
+Im zweiten step wurde noch ein bmp Sensor (temparatur / luftdruck) angeschaltet.
+Hierzu wurde die loraunobmp.ino erstellt.
+
+Die Zugangsdaten zum TTN Netzwerk müssen in einer extra erstellten config.h datei
+hinterlegt werden.
+
 Jetzt werden die Werte ueber das TTN Netzwerk entsprechend uebermittelt.
 
 Inzwischen gibt es hier im Git VZ auch eine Dokumentation 
