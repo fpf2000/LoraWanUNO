@@ -1,3 +1,3 @@
 
-const char *appEui = "YouAPPEUI";
-const char *appKey = "YouAPPKEY";
+const char *appEui = "You-APPEUI";
+const char *appKey = "You-APPKEY";
