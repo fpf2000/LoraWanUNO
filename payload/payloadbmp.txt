@@ -1,0 +1,19 @@
+function Decoder(bytes, port) {
+  var led = (bytes[0]);
+  var sensor = (bytes[1]);
+  var s_volt = (bytes[2]);
+  var ratio = (bytes[3])<<8 | bytes [4];
+  var rsr0 = (bytes[5])<<8 | bytes [6];
+  var tmp = (bytes[7]<<8 | bytes[8]);
+  var pre = (bytes[9]<<8 | bytes[10]);
+  
+     return {
+      LED: led ,
+      SENSOR: sensor,
+      S_VOLT: s_volt/100,
+      RATIO: ratio/100,
+      RSR0: rsr0/100,
+      temperature: (tmp-5000)/100,
+      airpressure: pre/100,
+  }   
+}
