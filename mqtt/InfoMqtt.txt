@@ -1,0 +1,9 @@
+Publik Adress
+eu1.cloud.thethings.network:1883
+Public TLS Adress 
+eu1.cloud.thethings.network:8883
+
+User:
+6c5ba9bf713c@ttn
+PW
+XXXXXXX
